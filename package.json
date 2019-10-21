@@ -1,0 +1,64 @@
+{
+  "name": "training",
+  "version": "1.0.0",
+  "description": "Training",
+  "engines": {
+    "node": ">=8.11.3"
+  },
+  "scripts": {
+    "webpack:dev": "cross-env NODE_ENV=development wp --watch",
+    "webpack:prd": "cross-env NODE_ENV=production wp",
+    "lint:js-server": "gulp lint:js-server",
+    "lint:js-client": "gulp lint:js-client",
+    "lint:scss": "gulp lint:scss",
+    "lint": "gulp lint",
+    "fix:js-server": "eslint --config .eslintrc_server.js --fix",
+    "fix:js-client": "eslint --config .eslintrc_client.js --fix",
+    "prettier": "prettier"
+  },
+  "repository": {
+    "type": "git"
+  },
+  "author": "Daniel Anechitoaie <daniel.anechitoaie@osf-commerce.com>",
+  "license": "UNLICENSED",
+  "private": true,
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-module-resolver": "^3.2.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "cross-env": "^5.2.0",
+    "css-loader": "^3.2.0",
+    "eslint": "^6.2.2",
+    "fs-extra": "^8.1.0",
+    "glob": "^7.1.2",
+    "gulp": "^4.0.0",
+    "gulp-eslint": "^6.0.0",
+    "gulp-stylelint": "^9.0.0",
+    "js-yaml": "^3.13.1",
+    "mini-css-extract-plugin": "^0.8.0",
+    "minimatch": "^3.0.4",
+    "node-sass": "^4.9.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "prettier": "^1.13.7",
+    "sass-loader": "^7.3.1",
+    "stylelint": "^10.1.0",
+    "stylelint-config-standard": "^18.2.0",
+    "stylelint-scss": "^3.10.0",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "webpack": "^4.39.2",
+    "webpack-command": "^0.5.0"
+  },
+  "dependencies": {
+    "bootstrap": "^4.1.1",
+    "cleave.js": "^1.5.3",
+    "flag-icon-css": "^3.0.0",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.3.1",
+    "js-cookie": "^2.2.1",
+    "lodash": "^4.17.13",
+    "popper.js": "^1.14.3"
+  }
+}
