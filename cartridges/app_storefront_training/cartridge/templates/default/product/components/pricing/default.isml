@@ -7,6 +7,7 @@
         <span class="strike-through list">
             <span class="value" itemprop="price" content="${price.decimalPrice}">
                 <isinclude template="/product/components/pricing/formatted" />
+                 <isset name="standardPrice" value="${price.decimalPrice}" scope="page" />
             </span>
         </span>
     </isif>
@@ -28,7 +29,7 @@
         <div class="best-deal">
             <isif condition="${standardPrice > price.decimalPrice && standardPrice !== null }"> 
                 <isset name="off" value="${(((standardPrice - (price.decimalPrice)) / standardPrice ) * 100) }" scope="page" /> 
-                ${Resource.msgf('global.porducttile.bestdeal', 'product' , null, off)}
+                <span>${Resource.msgf('global.porducttile.bestdeal', 'product' , null, off.toFixed(0))}<span>
             </isif>
         </div>
         </span>
