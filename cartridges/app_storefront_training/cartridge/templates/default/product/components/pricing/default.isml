@@ -24,6 +24,13 @@
             <span class="value" itemprop="price" content="${price.decimalPrice}">
         </isif>
         <isinclude template="/product/components/pricing/formatted" />
+        <iscomment> code for Best Deal off </iscomment>
+        <div class="best-deal">
+            <isif condition="${standardPrice > price.decimalPrice && standardPrice !== null }"> 
+                <isset name="off" value="${(((standardPrice - (price.decimalPrice)) / standardPrice ) * 100) }" scope="page" /> 
+                ${Resource.msgf('global.porducttile.bestdeal', 'product' , null, off)}
+            </isif>
+        </div>
         </span>
     </span>
 </span>
