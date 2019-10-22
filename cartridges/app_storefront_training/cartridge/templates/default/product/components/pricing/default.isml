@@ -28,8 +28,8 @@
         <iscomment> code for Best Deal off </iscomment>
         <div class="best-deal">
             <isif condition="${standardPrice > price.decimalPrice && standardPrice !== null }"> 
-                <isset name="off" value="${(((standardPrice - (price.decimalPrice)) / standardPrice ) * 100) }" scope="page" /> 
-                <span>${Resource.msgf('global.porducttile.bestdeal', 'product' , null, off.toFixed(0))}</span>
+                <isset name="off" value="${(((standardPrice - (price.decimalPrice)) / standardPrice ) * 100).toFixed(0) }" scope="page" /> 
+                <span>${Resource.msgf('global.porducttile.bestdeal', 'product' , null, off)}</span>
             </isif>
         </div>
     </span>
